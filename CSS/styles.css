@@ -1,0 +1,157 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    background-color: #b8860b;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #a67c10;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background-color: #b8860b;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Featured Brands */
+.featured-brands {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.brand-card {
+    border: 1px solid #eee;
+    padding: 30px;
+    transition: transform 0.3s;
+}
+
+.brand-card:hover {
+    transform: translateY(-5px);
+}
+
+.brand-card img {
+    width: 100%;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.brand-card h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+/* Featured Products */
+.featured-products {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    color: #b8860b;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
