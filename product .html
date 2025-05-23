@@ -16,7 +16,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="products.html">Watches</a></li>
-          <li><a href="brands.html">Brands</a></li>
+          <li><a href="products.html" class="btn">View Details</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -25,11 +25,45 @@
     </div>
   </header>
 
-  <section class="container">
-    <h1>Our Collection of Luxury Watches</h1>
-    <p>Explore our curated list of luxury timepieces. Add to cart with one click.</p>
-    <!-- Product grid here -->
-  </section>
+ <section class="featured-products container">
+  <h2 class="section-title">Featured Watches</h2>
+  <div class="products-grid">
+
+    <!-- Rolex -->
+    <div class="product-card">
+      <img src="https://content.rolex.com/dam/2022-11/upright-cc/m126233-0026.png" alt="Rolex Datejust">
+      <h3>Rolex Datejust 36</h3>
+      <div class="price">$9,250</div>
+      <button 
+        class="snipcart-add-item btn"
+        data-item-id="rolex-001"
+        data-item-name="Rolex Datejust 36"
+        data-item-price="9250"
+        data-item-url="index.html"
+        data-item-description="A timeless Rolex Datejust 36 with precision and style.">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Omega -->
+    <div class="product-card">
+      <img src="https://www.omegawatches.com/media/catalog/product/cache/image/1800x/a6c2a61f1b3b4f5f95ad929e3ff8131f/o/m/omega-seamaster-diver-300m-21032422003001-l.png" alt="Omega Seamaster">
+      <h3>Omega Seamaster 300M</h3>
+      <div class="price">$5,200</div>
+      <button 
+        class="snipcart-add-item btn"
+        data-item-id="omega-001"
+        data-item-name="Omega Seamaster 300M"
+        data-item-price="5200"
+        data-item-url="index.html"
+        data-item-description="A rugged and elegant diver’s watch from Omega.">
+        Add to Cart
+      </button>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer>
