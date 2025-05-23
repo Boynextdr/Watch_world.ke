@@ -164,35 +164,5 @@
       </div>
     </div>
   </footer>
-  <!-- Sidebar Cart Panel -->
-<div id="cartSidebar" class="cart-sidebar">
-  <div class="cart-header">
-    <span class="close-btn" onclick="closeCart()">&times;</span>
-    <h2>Your Cart</h2>
-  </div>
-  <div class="cart-body">
-    <p>Your items will appear here...</p>
-    <a href="checkout.html" class="btn">Proceed to Checkout</a>
-  </div>
-</div>
-<script>
-  function openCart() {
-    document.getElementById('cartSidebar').classList.add('open');
-  }
-
-  function closeCart() {
-    document.getElementById('cartSidebar').classList.remove('open');
-  }
-
-  // OPTIONAL: open sidebar when "Add to Cart" is clicked
-  document.querySelectorAll('.snipcart-add-item').forEach(button => {
-    button.addEventListener('click', function (e) {
-      e.preventDefault();
-      openCart();
-    });
-  });
-</script>
-
-
 </body>
 </html>
