@@ -131,7 +131,7 @@ body {
 
 .brands-grid {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap; /* or remove if you want strict single-line */
   gap: 1rem;
   margin-top: 1rem;
@@ -142,7 +142,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 150px; /* optional: control card width */
+  width: 300px; /* optional: control card width */
   text-decoration: none;
   color: inherit;
 }
