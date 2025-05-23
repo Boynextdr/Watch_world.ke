@@ -42,3 +42,26 @@ nav ul li a {
 nav ul li a:hover {
   color: #c7a17a;
 }
+.top-bar {
+  background-color: #25D366; /* WhatsApp green */
+  color: white;
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.whatsapp-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.whatsapp-link:hover {
+  text-decoration: underline;
+}
+
