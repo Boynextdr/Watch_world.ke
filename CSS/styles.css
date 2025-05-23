@@ -127,51 +127,33 @@ body {
   justify-content: center;
   margin-top: 30px;
 }
-.cart-sidebar {
-  position: fixed;
-  top: 0;
-  right: -350px;
-  width: 300px;
-  height: 100%;
-  background-color: #fff;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
-  transition: right 0.3s ease-in-out;
-  padding: 20px;
-}
+/* Add this to your styles.css or a <style> block */
 
-.cart-sidebar.open {
-  right: 0;
-}
-
-.cart-header {
+.brands-grid {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap; /* or remove if you want strict single-line */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.brand-card {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
-}
-
-.cart-header .close-btn {
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #333;
-}
-
-.cart-body {
-  margin-top: 20px;
-}
-
-.cart-body .btn {
-  display: block;
-  width: 100%;
-  background-color: #c7a17a;
-  color: white;
   text-align: center;
-  padding: 0.8rem;
+  width: 150px; /* optional: control card width */
   text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
+  color: inherit;
 }
+
+.brand-card img {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+
+
 
 
