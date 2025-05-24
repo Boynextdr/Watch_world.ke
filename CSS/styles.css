@@ -128,28 +128,49 @@ body {
   margin-top: 30px;
 }
 /* Add this to your styles.css or a <style> block */
-.brand-card {
+.brands-row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  overflow-x: auto;
+  gap: 2rem;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+}
+
+.brands-row::-webkit-scrollbar {
+  display: none; /* Optional: hides scrollbar */
+}
+
+.brand-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
   text-align: center;
   text-decoration: none;
+  color: inherit;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .brand-card img {
-  max-width: 100px;
+  width: 100px;
+  height: auto;
   transition: transform 0.3s ease;
 }
 
 .brand-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.brand-card:hover img {
-  transform: scale(1.1);
+.brand-card p {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 0.95rem;
 }
+@media (max-width: 768px) {
+  .brand-card img {
+    width: 80px;
+  }
+}
+
 
 .view-more-wrapper {
   text-align: center;
