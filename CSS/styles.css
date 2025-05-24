@@ -151,6 +151,25 @@ body {
   height: auto;
   object-fit: contain;
 }
+.view-more-wrapper {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.view-more-btn {
+  background-color: #000;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.view-more-btn:hover {
+  background-color: #444;
+}
+
 
 
 
