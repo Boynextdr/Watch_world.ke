@@ -115,7 +115,8 @@ body {
   width: 250px;          /* fixed width */
   height: 250px;         /* fixed height */
   object-fit: cover;     /* crop and center */
-  margin: 0 auto 10px;   /* center image and space below */
+  margin: 0 auto 10px; 
+   justify-content: space-evenly;  /* center image and space below */
   display: block;
   border-radius: 8px;
 }
