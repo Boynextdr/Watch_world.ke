@@ -131,23 +131,25 @@ body {
 
 .brands-grid {
   display: flex;
-  justify-content: center;      /* or use space-around / space-between */
+  justify-content: space-evenly;
   align-items: center;
-  flex-wrap: wrap;              /* keeps it responsive */
-  gap: 2rem;                    /* spacing between items */
-  margin-top: 1rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1rem 0;
+  text-align: center;
 }
 
 .brand-card {
-  text-align: center;
-  width: 150px;                 /* control size to prevent overflow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 150px;
 }
 
 .brand-card img {
-  max-width: 100%;
+  width: 100px;
   height: auto;
-  display: block;
-  margin: 0 auto;
+  object-fit: contain;
 }
 
 
