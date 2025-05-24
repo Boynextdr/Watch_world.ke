@@ -44,7 +44,7 @@ nav ul li a:hover {
 }
 .top-bar {
   background-color: hsl(0, 0%, 100%); /* WhatsApp green */
-  color: rgb(249, 255, 249);
+  color: rgb(7, 27, 7);
   padding: 0.5rem 0;
   font-size: 0.95rem;
 }
