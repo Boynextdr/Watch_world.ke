@@ -193,6 +193,22 @@ body {
 .view-more-btn:hover {
   background-color: #444;
 }
+.view-details-btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: #004d40;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.view-details-btn:hover {
+  background-color: #00695c;
+}
+
 
 
 
