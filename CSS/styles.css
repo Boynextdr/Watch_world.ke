@@ -208,7 +208,50 @@ body {
 .view-details-btn:hover {
   background-color: #00695c;
 }
+ body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f9f9f9;
+    }
 
+    .product-container {
+      display: flex;
+      flex-direction: column;
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .product-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .product-title {
+      font-size: 2rem;
+      margin-top: 1rem;
+      color: #333;
+    }
+
+    .product-price {
+      font-size: 1.2rem;
+      color: green;
+      margin-bottom: 1rem;
+    }
+
+    .product-specs {
+      margin-top: 1rem;
+      padding-left: 1rem;
+    }
+
+    .product-specs li {
+      margin-bottom: 0.5rem;
+    }
 
 
 

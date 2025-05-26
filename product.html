@@ -1,22 +1,20 @@
-<!-- product.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Watch World.ke | Luxury Watches</title>
-  <link rel="stylesheet" href="CSS/styles.css">
-  <link rel="stylesheet" href="CSS/footer.css">
-  <link rel="stylesheet" href="CSS/header.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Watch World.ke | Luxury Watches</title>
+ <link rel="stylesheet" href="CSS/styles.css">
+ <link rel="stylesheet" href="CSS/footer.css">
+ <link rel="stylesheet" href="CSS/header.css">
 </head>
 <body>
-  <div id="product-detail-container"></div>
+  <section class="Details-section">
+    <h1 style="text-align:center;">Product Details</h1>
+    <div id="product-detail-container"></div>
+  </section>
 
   <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = urlParams.get('id');
-
-    // Sample products (replace with real data or fetch from a server)
     const products = [
       {
         id: '123',
@@ -35,119 +33,122 @@
           year: '1996',
           waterResistance: 'Yes',
         }
-      }
-        ,
-        {
-            id: '124',
-            name: 'Omega Seamaster',
-            price: 'ksh 28,000',
-            image: 'images/WhatsApp Image 2025-05-22 at 12.31.24_1c12071b.jpg',
-            specs: {
-            model: 'Seamaster',
-            box: 'Yes',
-            bracelet: 'Stainless Steel',
-            case: 'Stainless Steel',
-            size: '41MM',
-            dial: 'Blue',
-            movement: 'Automatic',
-            warranty: '12 months',
-            year: '2018',
-            waterResistance: '300M',
-            }
-        },
-        {
-            id: '125',
-            name: 'Patek Philippe Nautilus',
-            price: 'ksh 28,000',
-            image: 'images/WhatsApp Image 2025-05-22 at 12.31.24_2d843ac6.jpg',
-            specs: {
-            model: 'Nautilus 5711',
-            box: 'Yes',
-            bracelet: 'Stainless Steel',
-            case: 'Stainless Steel',
-            size: '40MM',
-            dial: 'Blue',
-            movement: 'Automatic',
-            warranty: '12 months',
-            year: '2020',
-            waterResistance: '120M',
-            }
-        },
-        {
-            id: '126',
-            name: 'Audemars Piguet Royal Oak',
-            price: 'ksh 28,000',
-            image: 'images/WhatsApp Image 2025-05-22 at 12.31.24_2d843ac6.jpg',
-            specs: {
-            model: 'Royal Oak 15400',
-            box: 'Yes',
-            bracelet: 'Stainless Steel',
-            case: 'Stainless Steel',
-            size: '41MM',
-            dial: 'Black',
-            movement: 'Automatic',
-            warranty: '12 months',
-            year: '2019',
-            waterResistance: '50M',
-            }
-        },
-        {
-            id: '127',
-            name: 'Richard Mille RM 11-03',
-            price: 'ksh 28,000',
-            image: 'images/richardmille.jpg',
-            specs: {
-            model: 'RM 11-03',
-            box: 'Yes',
-            bracelet: 'Rubber',
-            case: 'Titanium',
-            size: '49MM',
-            dial: 'Skeleton',
-            movement: 'Automatic',
-            warranty: '12 months',
-            year: '2021',
-            waterResistance: '50M',
-            }
-        },
-        {
-            id: '128',
-            name: 'IWC Big Pilot',
-            price: 'ksh 28,000',
-            image: 'images/iwc.jpg',
-            specs: {
-            model: 'Big Pilot IW501001',
-            box: 'Yes',
-            bracelet: 'Leather',
-            case: 'Stainless Steel',
-            size: '46MM',
-            dial: 'Black',
-            movement: 'Automatic',
-            warranty: '12 months',
-            year: '2022',
-            waterResistance: '60M',
-            }
-        },
-      
-      // Add more product objects here
+      },
+      {
+        id: '124',
+        name: 'Omega Seamaster',
+        price: 'ksh 28,000',
+        image: 'images/WhatsApp Image 2025-05-22 at 12.31.24_1c12071b.jpg',
+        specs: {
+          model: 'Seamaster',
+          box: 'Yes',
+          bracelet: 'Stainless Steel',
+          case: 'Stainless Steel',
+          size: '41MM',
+          dial: 'Blue',
+          movement: 'Automatic',
+          warranty: '12 months',
+          year: '2018',
+          waterResistance: '300M',
+        }
+      },
+      {
+        id: '125',
+        name: 'Patek Philippe Nautilus',
+        price: 'ksh 28,000',
+        image: 'images/WhatsApp Image 2025-05-22 at 12.31.24_2d843ac6.jpg',
+        specs: {
+          model: 'Nautilus 5711',
+          box: 'Yes',
+          bracelet: 'Stainless Steel',
+          case: 'Stainless Steel',
+          size: '40MM',
+          dial: 'Blue',
+          movement: 'Automatic',
+          warranty: '12 months',
+          year: '2020',
+          waterResistance: '120M',
+        }
+      },
+      {
+        id: '126',
+        name: 'Audemars Piguet Royal Oak',
+        price: 'ksh 28,000',
+        image: 'images/WhatsApp Image 2025-05-22 at 12.31.24_2d843ac6.jpg',
+        specs: {
+          model: 'Royal Oak 15400',
+          box: 'Yes',
+          bracelet: 'Stainless Steel',
+          case: 'Stainless Steel',
+          size: '41MM',
+          dial: 'Black',
+          movement: 'Automatic',
+          warranty: '12 months',
+          year: '2019',
+          waterResistance: '50M',
+        }
+      },
+      {
+        id: '127',
+        name: 'Richard Mille RM 11-03',
+        price: 'ksh 28,000',
+        image: 'images/richardmille.jpg',
+        specs: {
+          model: 'RM 11-03',
+          box: 'Yes',
+          bracelet: 'Rubber',
+          case: 'Titanium',
+          size: '49MM',
+          dial: 'Skeleton',
+          movement: 'Automatic',
+          warranty: '12 months',
+          year: '2021',
+          waterResistance: '50M',
+        }
+      },
+      {
+        id: '128',
+        name: 'IWC Big Pilot',
+        price: 'ksh 28,000',
+        image: 'images/iwc.jpg',
+        specs: {
+          model: 'Big Pilot IW501001',
+          box: 'Yes',
+          bracelet: 'Leather',
+          case: 'Stainless Steel',
+          size: '46MM',
+          dial: 'Black',
+          movement: 'Automatic',
+          warranty: '12 months',
+          year: '2022',
+          waterResistance: '60M',
+        }
+      },
     ];
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
     const product = products.find(p => p.id === productId);
 
+    const container = document.getElementById('product-detail-container');
+
     if (product) {
-      const container = document.getElementById('product-detail-container');
       container.innerHTML = `
         <div class="product-detail">
-          <img src="${product.image}" alt="${product.name}">
+          <img src="${product.image}" alt="${product.name}" />
           <h2>${product.name}</h2>
           <p><strong>Price:</strong> ${product.price}</p>
           <h3>Specifications:</h3>
           <ul>
-            ${Object.entries(product.specs).map(([key, val]) => `<li><strong>${key}:</strong> ${val}</li>`).join('')}
+            ${Object.entries(product.specs).map(
+              ([key, value]) =>
+                `<li><strong>${key.charAt(0).toUpperCase() + key.slice(1)}:</strong> ${value}</li>`
+            ).join('')}
           </ul>
         </div>
       `;
     } else {
-      document.getElementById('product-detail-container').innerHTML = '<p>Product not found.</p>';
+      container.innerHTML = '<p>Product not found.</p>';
     }
   </script>
 </body>
