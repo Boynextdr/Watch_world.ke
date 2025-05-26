@@ -132,9 +132,12 @@ body {
 .brands-row {
   display: flex;
   overflow-x: auto;
-  gap: 2rem;
   padding: 1rem 0;
+  gap: 2rem;
   scroll-snap-type: x mandatory;
+  justify-content: flex-start;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .brands-row::-webkit-scrollbar {
@@ -142,7 +145,7 @@ body {
 }
 
 .brand-card {
-  flex: 0 0 auto;
+  flex: 0 0 140px; /* Fixed width for even spacing */
   scroll-snap-align: start;
   text-align: center;
   text-decoration: none;
@@ -158,15 +161,8 @@ body {
 
 .brand-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
-.brand-card p {
-  margin-top: 0.5rem;
-  font-weight: bold;
-  font-size: 0.95rem;
-}
-
 
 .brand-card:hover img {
   transform: scale(1.1);
@@ -175,7 +171,9 @@ body {
 .brand-card p {
   margin-top: 0.5rem;
   font-weight: bold;
+  font-size: 0.95rem;
 }
+
 
 .view-more-wrapper {
   text-align: center;
