@@ -1,155 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Watch World.ke | Luxury Watches</title>
- <link rel="stylesheet" href="CSS/styles.css">
- <link rel="stylesheet" href="CSS/footer.css">
- <link rel="stylesheet" href="CSS/header.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watch Products</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .product-container { display: flex; flex-wrap: wrap; gap: 20px; }
+    .product { border: 1px solid #ccc; border-radius: 8px; padding: 10px; width: 200px; }
+    .product img { width: 100%; height: auto; border-radius: 4px; }
+    .product h3 { margin: 10px 0 5px; font-size: 16px; }
+    .product p { margin: 5px 0; font-size: 14px; }
+  </style>
 </head>
 <body>
-  <section class="Details-section">
-    <h1 style="text-align:center;">Product Details</h1>
-    <div id="product-detail-container"></div>
-  </section>
+  <h1>Available Watches</h1>
+  <div class="product-container" id="productList"></div>
 
   <script>
     const products = [
       {
-        id: '123',
-        name: 'Rolex Datejust 31',
-        price: 'ksh 28,000',
-        image: 'images/rolex.jpg',
-        specs: {
-          model: 'Datejust 31',
-          box: 'Yes',
-          bracelet: 'Jubilee',
-          case: 'Two Tone Yellow Gold',
-          size: '31MM',
-          dial: 'Champagne',
-          movement: 'Automatic',
-          warranty: '12 months',
-          year: '1996',
-          waterResistance: 'Yes',
-        }
+        id: "123",
+        name: "Skeleton AP Royal Oak",
+        price: "Ksh 33,000",
+        image: "images/WhatsApp Image 2025-05-22 at 12.31.17_927c286f.jpg",
+        description: "A timeless Rolex classic, perfect for any occasion. Features a 36mm case with automatic movement."
       },
       {
-        id: '124',
-        name: 'Omega Seamaster',
-        price: 'ksh 28,000',
-        image: 'images/WhatsApp Image 2025-05-22 at 12.31.24_1c12071b.jpg',
-        specs: {
-          model: 'Seamaster',
-          box: 'Yes',
-          bracelet: 'Stainless Steel',
-          case: 'Stainless Steel',
-          size: '41MM',
-          dial: 'Blue',
-          movement: 'Automatic',
-          warranty: '12 months',
-          year: '2018',
-          waterResistance: '300M',
-        }
+        id: "124",
+        name: "Audemars Piguet Royal Oak",
+        price: "Ksh 30,000",
+        image: "images/WhatsApp Image 2025-05-22 at 12.31.19_7129a62f.jpg",
+        description: "A professional diving watch with superior water resistance and sleek design."
       },
       {
-        id: '125',
-        name: 'Patek Philippe Nautilus',
-        price: 'ksh 28,000',
-        image: 'images/WhatsApp Image 2025-05-22 at 12.31.24_2d843ac6.jpg',
-        specs: {
-          model: 'Nautilus 5711',
-          box: 'Yes',
-          bracelet: 'Stainless Steel',
-          case: 'Stainless Steel',
-          size: '40MM',
-          dial: 'Blue',
-          movement: 'Automatic',
-          warranty: '12 months',
-          year: '2020',
-          waterResistance: '120M',
-        }
-      },
-      {
-        id: '126',
-        name: 'Audemars Piguet Royal Oak',
-        price: 'ksh 28,000',
-        image: 'images/WhatsApp Image 2025-05-22 at 12.31.24_2d843ac6.jpg',
-        specs: {
-          model: 'Royal Oak 15400',
-          box: 'Yes',
-          bracelet: 'Stainless Steel',
-          case: 'Stainless Steel',
-          size: '41MM',
-          dial: 'Black',
-          movement: 'Automatic',
-          warranty: '12 months',
-          year: '2019',
-          waterResistance: '50M',
-        }
-      },
-      {
-        id: '127',
-        name: 'Richard Mille RM 11-03',
-        price: 'ksh 28,000',
-        image: 'images/richardmille.jpg',
-        specs: {
-          model: 'RM 11-03',
-          box: 'Yes',
-          bracelet: 'Rubber',
-          case: 'Titanium',
-          size: '49MM',
-          dial: 'Skeleton',
-          movement: 'Automatic',
-          warranty: '12 months',
-          year: '2021',
-          waterResistance: '50M',
-        }
-      },
-      {
-        id: '128',
-        name: 'IWC Big Pilot',
-        price: 'ksh 28,000',
-        image: 'images/iwc.jpg',
-        specs: {
-          model: 'Big Pilot IW501001',
-          box: 'Yes',
-          bracelet: 'Leather',
-          case: 'Stainless Steel',
-          size: '46MM',
-          dial: 'Black',
-          movement: 'Automatic',
-          warranty: '12 months',
-          year: '2022',
-          waterResistance: '60M',
-        }
-      },
+        id: "125",
+        name: "Audemars Piguet Royal Oak",
+        price: "Ksh 32,000",
+        image: "images/WhatsApp Image 2025-05-22 at 12.31.20_76402928.jpg",
+        description: "An iconic luxury watch known for its unique octagonal bezel and integrated bracelet."
+      }
+      
+      // ... add more entries here as needed, preferably after fixing the JSON syntax
     ];
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = urlParams.get('id');
-    const product = products.find(p => p.id === productId);
+    const productList = document.getElementById("productList");
 
-    const container = document.getElementById('product-detail-container');
+    products.forEach(product => {
+      const productCard = document.createElement("div");
+      productCard.className = "product";
 
-    if (product) {
-      container.innerHTML = `
-        <div class="product-detail">
-          <img src="${product.image}" alt="${product.name}" />
-          <h2>${product.name}</h2>
-          <p><strong>Price:</strong> ${product.price}</p>
-          <h3>Specifications:</h3>
-          <ul>
-            ${Object.entries(product.specs).map(
-              ([key, value]) =>
-                `<li><strong>${key.charAt(0).toUpperCase() + key.slice(1)}:</strong> ${value}</li>`
-            ).join('')}
-          </ul>
-        </div>
+      productCard.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" />
+        <h3>${product.name}</h3>
+        <p><strong>${product.price}</strong></p>
+        <p>${product.description}</p>
       `;
-    } else {
-      container.innerHTML = '<p>Product not found.</p>';
-    }
+
+      productList.appendChild(productCard);
+    });
   </script>
 </body>
 </html>
