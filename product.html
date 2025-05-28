@@ -412,27 +412,25 @@
         const productContainer = document.getElementById('productContainer');
         const product = products[productId];
 
-        if (product) {
-                    productContainer.innerHTML = `
-                <div class="product-details-wrapper">
-                    <div class="product-image">
-                        <img src="${product.image}" alt="${product.name}">
-                    </div>
-                    <div class="product-info">
-                        <a href="javascript:history.back()" class="back-button">← Back</a>
-                        <h1>${product.name}</h1>
-                        <div class="price">${product.price}</div>
-                        <div class="product-specs">
-                            <p><strong>Model:</strong> Royal Oak Skeleton</p>
-                            <p><strong>Box:</strong> Yes</p>
-                            <p><strong>Papers:</strong> Yes</p>
-                        </div>
-                        <p class="description">${product.description}</p>
-                        <div class="product-actions">
-                            <button class="btn-primary">Add to Basket</button>
-                            <button class="btn-secondary">Enquire</button>
-                            <button class="btn-secondary">WhatsApp Us</button>
-                        </div>
+
+            if (product) {
+            productContainer.innerHTML = `
+                <div class="product-info">
+                    <h1 class="product-title">${product.name}</h1>
+                </div>
+                <div class="product-image">
+                    <img src="${product.image}" alt="${product.name}">
+                </div>
+                <div class="product-info">
+                    <div class="price">${product.price}</div>
+                    <p class="model"><strong>Model:</strong> ${product.name}</p>
+                    <p class="box"><strong>Box:</strong> Yes</p>
+                    <p class="papers"><strong>Papers:</strong> Yes</p>
+                    <p class="description">${product.description}</p>
+                    <div class="product-buttons">
+                        <button>Add to Basket</button>
+                        <button>Enquire</button>
+                        <button>WhatsApp Us</button>
                     </div>
                 </div>
             `;
@@ -440,7 +438,6 @@
         } else {
             productContainer.innerHTML = `
                 <div class="product-info">
-                    <a href="javascript:history.back()" class="back-button">← Back</a>
                     <h1>Product Not Found</h1>
                     <p>Sorry, the requested product could not be found.</p>
                 </div>
