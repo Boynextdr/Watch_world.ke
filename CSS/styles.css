@@ -266,7 +266,7 @@ body {
 
 .product-image img {
     width: 100%;
-    max-width: 350px; /* Reduced from 500px to 350px */
+    max-width: 300px; /* Reduced from 500px to 350px */
     border-radius: 10px;
     object-fit: contain;
 }
