@@ -1,64 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Watch Products</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    .product-container { display: flex; flex-wrap: wrap; gap: 20px; }
-    .product { border: 1px solid #ccc; border-radius: 8px; padding: 10px; width: 200px; }
-    .product img { width: 100%; height: auto; border-radius: 4px; }
-    .product h3 { margin: 10px 0 5px; font-size: 16px; }
-    .product p { margin: 5px 0; font-size: 14px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Watch World.ke</title>
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
-  <h1>Available Watches</h1>
-  <div class="product-container" id="productList"></div>
+    <!-- Header -->
+    <header>
+        <div class="container main-header">
+            <div class="logo">Watch <span>World.ke</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Buy</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <script>
-    const products = [
-      {
-        id: "123",
-        name: "Skeleton AP Royal Oak",
-        price: "Ksh 33,000",
-        image: "images/WhatsApp Image 2025-05-22 at 12.31.17_927c286f.jpg",
-        description: "A timeless Rolex classic, perfect for any occasion. Features a 36mm case with automatic movement."
-      },
-      {
-        id: "124",
-        name: "Audemars Piguet Royal Oak",
-        price: "Ksh 30,000",
-        image: "images/WhatsApp Image 2025-05-22 at 12.31.19_7129a62f.jpg",
-        description: "A professional diving watch with superior water resistance and sleek design."
-      },
-      {
-        id: "125",
-        name: "Audemars Piguet Royal Oak",
-        price: "Ksh 32,000",
-        image: "images/WhatsApp Image 2025-05-22 at 12.31.20_76402928.jpg",
-        description: "An iconic luxury watch known for its unique octagonal bezel and integrated bracelet."
-      }
-      
-      // ... add more entries here as needed, preferably after fixing the JSON syntax
-    ];
+    <div class="product-container" id="productContainer">
+        <!-- Product details will be inserted here by JavaScript -->
+    </div>
 
-    const productList = document.getElementById("productList");
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>About Us</h4>
+                    <p>Watch World.ke is your trusted source for authentic luxury timepieces in Kenya and beyond.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p>Phone: +254718995761<br>Email: watchworldnairobi@gmail.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Watch World.ke. All rights reserved.
+            </div>
+        </div>
+    </footer>
 
-    products.forEach(product => {
-      const productCard = document.createElement("div");
-      productCard.className = "product";
+    <script>
+        // Get the product ID from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
 
-      productCard.innerHTML = `
-        <img src="${product.image}" alt="${product.name}" />
-        <h3>${product.name}</h3>
-        <p><strong>${product.price}</strong></p>
-        <p>${product.description}</p>
-      `;
+        // Product database
+        const products = {
+            // Featured products from index.html
+            "123": {
+                name: "Skeleton AP Royal Oak",
+                price: "ksh 33,000",
+                image: "images/WhatsApp Image 2025-05-22 at 12.31.17_927c286f.jpg",
+                description: "A masterpiece of horological engineering, the Skeleton AP Royal Oak features a transparent dial showcasing the intricate movement within. The iconic octagonal bezel and integrated bracelet design make this timepiece instantly recognizable."
+            },
+            "124": {
+                name: "Skeleton AP Royal Oak",
+                price: "ksh 30,000",
+                image: "images/WhatsApp Image 2025-05-22 at 12.31.19_7129a62f.jpg",
+                description: "This variant of the Skeleton AP Royal Oak combines technical excellence with aesthetic beauty. The exposed mechanism offers a glimpse into the sophisticated world of haute horlogerie."
+            },
+            // Add more products here matching your products.html IDs
+            // Example format:
+            // "id": {
+            //     name: "Product Name",
+            //     price: "Price",
+            //     image: "image path",
+            //     description: "Detailed description"
+            // }
+        };
 
-      productList.appendChild(productCard);
-    });
-  </script>
+        // Display product details
+        const productContainer = document.getElementById('productContainer');
+        const product = products[productId];
+
+        if (product) {
+            productContainer.innerHTML = `
+                <div class="product-image">
+                    <img src="${product.image}" alt="${product.name}">
+                </div>
+                <div class="product-info">
+                    <a href="javascript:history.back()" class="back-button">← Back</a>
+                    <h1>${product.name}</h1>
+                    <div class="price">${product.price}</div>
+                    <p class="description">${product.description}</p>
+                </div>
+            `;
+        } else {
+            productContainer.innerHTML = `
+                <div class="product-info">
+                    <a href="javascript:history.back()" class="back-button">← Back</a>
+                    <h1>Product Not Found</h1>
+                    <p>Sorry, the requested product could not be found.</p>
+                </div>
+            `;
+        }
+    </script>
 </body>
 </html>
