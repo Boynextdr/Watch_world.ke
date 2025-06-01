@@ -20,9 +20,10 @@ header {
 }
 
 .logo-img {
-  height: 45px;
-  width: auto;
-  border-radius: 5px;
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .logo-text {
@@ -32,7 +33,7 @@ header {
 }
 
 .logo-text span {
-  color: #c7a17a; /* gold-ish brand color */
+  color: #c7a17a;
 }
 
 .nav-links {
@@ -53,6 +54,7 @@ header {
 .nav-links li a:hover {
   color: #c7a17a;
 }
+
 
 .top-bar {
   background-color: hsl(0, 0%, 100%); /* WhatsApp green */
