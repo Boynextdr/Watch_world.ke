@@ -6,42 +6,54 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 .main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 0;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #222;
-}
-
-.logo span {
-  color: #c7a17a;
-}
-
-nav ul {
-  list-style: none;
+.header-left {
   display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  height: 45px;
+  width: auto;
+  border-radius: 5px;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.logo-text span {
+  color: #c7a17a; /* gold-ish brand color */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
   gap: 25px;
   padding: 0;
   margin: 0;
 }
 
-nav ul li a {
+.nav-links li a {
   text-decoration: none;
-  color: #222;
+  color: #000;
   font-weight: 500;
-  position: relative;
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+.nav-links li a:hover {
   color: #c7a17a;
 }
+
 .top-bar {
   background-color: hsl(0, 0%, 100%); /* WhatsApp green */
   color: rgb(7, 27, 7);
